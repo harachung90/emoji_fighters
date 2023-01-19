@@ -8,13 +8,10 @@ let fightButton = document.getElementById("fightButton")
 // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
     
 fightButton.addEventListener("click", function() {
-    let randomNumber1 = Math.floor(Math.random() * 17)
-    let randomNumber2 = Math.floor(Math.random() * 17)
-    let fighter1 = fighters[randomNumber1]
-    let fighter2 = fighters[randomNumber2]
-    console.log("random numbers:" + randomNumber1 + randomNumber2)
-    console.log(fighter1, fighter2)
-
-    stageEl.textContent = fighter1 + " vs " + fighter2;
+    let randomNumber1 = Math.floor(Math.random() * fighters.length)
+    let randomNumber2 = Math.floor(Math.random() * fighters.length)
+    console.log(randomNumber1, randomNumber2)
+    console.log(fighters[1])
+    stageEl.textContent = fighters[randomNumber1] + " vs " + fighters[randomNumber2];
 
 })
